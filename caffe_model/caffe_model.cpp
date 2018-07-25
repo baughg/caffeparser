@@ -11,7 +11,7 @@
 #include <fstream>
 #include <string>
 #include <stdio.h>
-#include "caffe.pb.h"
+#include "caffe_low_precision.pb.h"
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/io/zero_copy_stream_impl.h>
 #include <google/protobuf/text_format.h>
@@ -64,6 +64,23 @@ int main(int argc, char** argv)
       std::cerr << "Failed to parse mean blob file." << std::endl;
       return -1;
     }
+
+    //// temp
+    //std::string mean_blob_filename_out = "mean_zero.binaryproto";
+    //std::ofstream out_mean(mean_blob_filename_out.c_str(), std::ios::out | std::ios::binary);
+    //const int data_size = mean_blob.data_size();
+
+    //
+
+    //for (int i = 0; i < data_size; ++i)
+    //{
+    //  mean_blob.set_data(i, 0.0f);
+    //}
+
+    //if (!mean_blob.SerializeToOstream(&out_mean)) {
+    //  std::cerr << "Failed to parse mean blob file." << std::endl;
+    //  return -1;
+    //}
   }
 
   NNGraph graph;
@@ -153,10 +170,10 @@ void report_net_structure(
     if (source_layer.has_convolution_param())
     {
       const caffe::ConvolutionParameter &conv_param = source_layer.convolution_param();
-      printf(" {params: o=%d, k=%d, s=%d} ",
+      /*printf(" {params: o=%d, k=%d, s=%d} ",
         conv_param.num_output(),
         conv_param.kernel_size()[0],
-        conv_param.stride()[0]);
+        conv_param.stride()[0]);*/
 
     }
     for (int b = 0; b < blob_count; ++b) {

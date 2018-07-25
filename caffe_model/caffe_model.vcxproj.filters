@@ -18,10 +18,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="caffe.pb.h">
+    <ClInclude Include="NNGraph.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="NNGraph.h">
+    <ClInclude Include="caffe_low_precision.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -29,10 +29,10 @@
     <ClCompile Include="caffe_model.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="caffe.pb.cc">
+    <ClCompile Include="NNGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="NNGraph.cpp">
+    <ClCompile Include="caffe_low_precision.pb.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

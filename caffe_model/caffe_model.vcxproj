@@ -148,11 +148,11 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="caffe.pb.h" />
+    <ClInclude Include="caffe_low_precision.pb.h" />
     <ClInclude Include="NNGraph.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="caffe.pb.cc" />
+    <ClCompile Include="caffe_low_precision.pb.cc" />
     <ClCompile Include="caffe_model.cpp" />
     <ClCompile Include="NNGraph.cpp" />
   </ItemGroup>
